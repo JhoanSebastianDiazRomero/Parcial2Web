@@ -5,13 +5,17 @@ import IApto from "../assets/building.png";
 import "./SpaceStyle.css";
 
 export default function SpaceComponent(props) {
-  console.log(props.image);
   return (
     <Col>
-      <Card style={{ width: "18rem" }}>
+      <Card
+        style={{ width: "18rem", cursor: "pointer" }}
+        onClick={() => {
+          props.handleClick(props.id);
+        }}
+      >
         <Card.Body>
           <Image
-            src={props.image === "house" ? ICasa : IApto}
+            src={props.type === "house" ? ICasa : IApto}
             className="imgCard"
           />
           <Card.Title>{props.name}</Card.Title>

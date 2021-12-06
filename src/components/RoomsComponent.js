@@ -61,6 +61,9 @@ export default function RoomsComponent(props) {
       </Row>
       {selectedRoom !== null && (
         <Row>
+          <h5>
+            <FormattedMessage id="Power"></FormattedMessage>
+          </h5>
           <PieChart rooms={rooms} />
         </Row>
       )}
